@@ -43,7 +43,7 @@ font-size: 24px;</string>
       <x>730</x>
       <y>10</y>
       <width>61</width>
-      <height>51</height>
+      <height>51</height> 
      </rect>
     </property>
     <property name="styleSheet">
