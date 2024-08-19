@@ -5,7 +5,7 @@ import subprocess
 
 
 # eto vsio banalnaya hueten, dumaiu ya raberus potom
-minecraft_directory = os.path.expanduser("~/.minecraft")
+minecraft_directory = os.path.expanduser(".minecraft")
 
 available_versions = mll.utils.get_available_versions(minecraft_directory)
 
