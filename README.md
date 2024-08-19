@@ -15,7 +15,7 @@
   ```sh
   python -m pip install minecraft_launcher_lib tqdm subprocess
   ```
-  После этого загрузите исходный код, найдите файл main.py по пути: ./v1/main.py и запустите его. Вам понадобится только 1 файл. 
+  После этого загрузите исходный код, найдите файл main.py по пути: `./v1/main.py` и запустите его. Вам понадобится только 1 файл. 
 </details>
 <details>
   <summary>v.2.0 (нажми меня)</summary>
@@ -36,7 +36,7 @@
   ```sh
   python -m pip install minecraft_launcher_lib pyqt5 subprocess
   ```
-  После этого загрузите исходный код и запустите main.py
+  После этого загрузите исходный код, найдите файл main.py по пути: `./v2/main.py` и запустите его.
 </details>
 
 ## License
