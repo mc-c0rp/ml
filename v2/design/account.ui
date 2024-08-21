@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ml</class>
+ <widget class="QWidget" name="ml">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>293</width>
+    <height>152</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ml - Аккаунт / mc_c0rp</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(24, 24, 24);
+font: 63 8pt &quot;Bahnschrift SemiBold&quot;;
+color: rgb(239, 239, 239)</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>261</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 24px</string>
+   </property>
+   <property name="text">
+    <string>Аккаунт</string>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="accountEdit">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>271</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPlainTextEdit{
+	font-size: 16px;
+	border: 1px solid rgb(197, 197, 197);
+	border-radius: 10px;
+	background-color: rgb(40, 40, 40);
+	padding: 5px;
+}
+QScrollBar:vertical {
+    border-radius: 10px;
+	background-color
+}</string>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="plainText">
+    <string/>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::TextEditable|Qt::TextSelectableByMouse</set>
+   </property>
+   <property name="placeholderText">
+    <string>ebanat1337</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="accountEditBtn">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>100</y>
+     <width>161</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(0, 100, 0);
+border-radius: 10px;
+color: rgb(225, 225, 225);
+font-size: 24px;</string>
+   </property>
+   <property name="text">
+    <string>Готово</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="accountEditClear">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(116, 56, 57);
+border-radius: 10px;
+color: rgb(225, 225, 225);
+font-size: 24px;</string>
+   </property>
+   <property name="text">
+    <string>Сброс</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

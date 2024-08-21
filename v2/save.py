@@ -43,7 +43,7 @@ def check():
         return f'ex: {ex}'
 
     
-def savef(file, data, indent=4):
+def savef(file, data:dict, indent=4):
     """
     Сохраняет данные в формате JSON в файл с указанным именем.
 

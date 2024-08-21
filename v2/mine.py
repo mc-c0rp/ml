@@ -2,6 +2,7 @@ import minecraft_launcher_lib as mll
 import os
 import subprocess
 from tqdm import tqdm
+from PyQt5.QtWidgets import QProgressBar
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 mine_dir = os.path.join(current_directory, '.minecraft')
@@ -15,12 +16,14 @@ def get_ver():
     release_versions = [version['id'] for version in available_versions if version['type'] == 'release']
     return release_versions
 
-def install(ver):
+def install(ver, progressBar: QProgressBar):
     print(f'Скачивание версии {ver}...')
-    mll.install.install_minecraft_version(ver, mine_dir)
+    progressBar.setVisible(True)
+    mll.install.install_minecraft_version(ver, mine_dir, callback={'setMax': progressBar.setMaximum, 'setProgress': progressBar.setValue})
+    progressBar.setVisible(False)
     print('Скачано')
 
-def launch(username, ver):
+def launch(username, ver, progressBar: QProgressBar):
     if not os.path.exists(os.path.join(mine_dir, 'versions', ver)):
         global pbar
         pbar = tqdm(total=100, desc="Загрузка Minecraft", unit="%")
@@ -34,7 +37,7 @@ def launch(username, ver):
         def download_callback(progress):
             pbar.update(progress - pbar.n)
 
-        mll.install.install_minecraft_version(ver, minecraft_directory, callback={"setProgress": download_callback, 'setMax': set_total, 'setStatus': set_status})
+        install(ver, progressBar)
         pbar.close()
 
     login_data = {
@@ -50,6 +53,14 @@ def launch(username, ver):
         subprocess.run(launch_command, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Ошибка при запуске Minecraft: {e}")
+
+def get_news():
+    news = mll.utils.get_minecraft_news()
+    text = 'Новости:\n\n'
+    for article in news["article_grid"]:
+        text += article["default_tile"]["title"] + "\nhttps://minecraft.net" + article["article_url"] + f' - {article['publish_date']}\n\n'
+    print('text')
+    return text
 
 # Пример использования
 # versions = get_ver()
